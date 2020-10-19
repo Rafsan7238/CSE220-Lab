@@ -1,0 +1,22 @@
+
+  /* First Constructor:
+   * Creates a linked list using the values from the given array. head will refer
+   * to the Node that contains the element from a[0]
+   */ 
+  public LinkedList(Object [] a){
+     head=new Node(a[0],null);
+    Node prev=head;
+    for (int i=1; i<a.length; ++i){
+    Node n= new Node(a[i],null);
+    prev.next=n;
+    prev=n;
+    }
+  }
+  
+  /* Second Constructor:
+   * Sets the value of head. head will refer
+   * to the given LinkedList
+   */
+  public LinkedList(Node h){
+    head=h;
+  }
